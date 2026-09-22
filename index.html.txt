@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Diazzi Contabilidade - atividades de contabilidade em Porto Velho, Rondônia. Atendimento profissional, organização e orientação para sua empresa.">
+  <meta name="theme-color" content="#0d6efd">
+  <title>Diazzi Contabilidade | Contabilidade em Porto Velho - RO</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --dark: #0b1f3a;
+      --soft: #f5f8fc;
+      --text: #334155;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+    }
+
+    .navbar {
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,.96) !important;
+      border-bottom: 1px solid rgba(15,23,42,.06);
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0d6efd, #084298);
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(13,110,253,.22);
+    }
+
+    .hero {
+      min-height: 86vh;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(13,110,253,.14), transparent 30%),
+        radial-gradient(circle at 10% 80%, rgba(25,135,84,.09), transparent 28%),
+        linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+      padding-top: 90px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .55rem .9rem;
+      border-radius: 999px;
+      background: #eaf3ff;
+      color: #0758c9;
+      font-weight: 700;
+      font-size: .9rem;
+    }
+
+    .hero h1 {
+      color: var(--dark);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      line-height: 1.08;
+    }
+
+    .hero h1 span { color: var(--primary); }
+
+    .hero-card {
+      background: rgba(255,255,255,.9);
+      border: 1px solid rgba(13,110,253,.12);
+      border-radius: 28px;
+      box-shadow: 0 25px 70px rgba(15,23,42,.10);
+    }
+
+    .icon-box {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #eaf3ff;
+      color: var(--primary);
+      font-size: 1.45rem;
+      flex: 0 0 auto;
+    }
+
+    .section-padding { padding: 90px 0; }
+    .section-title {
+      color: var(--dark);
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .section-subtitle { max-width: 720px; margin: 0 auto; }
+
+    .service-card {
+      height: 100%;
+      border: 1px solid #e8eef6;
+      border-radius: 22px;
+      background: #fff;
+      padding: 28px;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(15,23,42,.09);
+      border-color: rgba(13,110,253,.25);
+    }
+
+    .service-card h3 { color: var(--dark); font-size: 1.15rem; font-weight: 750; }
+
+    .stats {
+      background: var(--dark);
+      color: #fff;
+    }
+
+    .stat-number { font-size: 2rem; font-weight: 800; }
+    .stat-label { color: #b9c7d9; }
+
+    .about-box {
+      border-radius: 26px;
+      background: var(--soft);
+      border: 1px solid #e7edf5;
+    }
+
+    .info-list li {
+      padding: .85rem 0;
+      border-bottom: 1px dashed #dce4ee;
+    }
+    .info-list li:last-child { border-bottom: 0; }
+
+    .contact-card {
+      border-radius: 24px;
+      border: 1px solid #e5ebf3;
+      background: #fff;
+      box-shadow: 0 15px 40px rgba(15,23,42,.06);
+    }
+
+    .cta {
+      border-radius: 30px;
+      background: linear-gradient(135deg, #0d6efd, #084298);
+      color: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cta::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+      right: -100px;
+      top: -100px;
+    }
+
+    footer {
+      background: #07162a;
+      color: #aebdd0;
+    }
+    footer a { color: #fff; text-decoration: none; }
+    footer a:hover { color: #9ec5fe; }
+
+    .small-caps {
+      font-size: .76rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-weight: 800;
+      color: #6c7a8d;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 1030;
+      width: 58px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #198754;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 12px 30px rgba(25,135,84,.35);
+      font-size: 1.65rem;
+      transition: transform .2s ease;
+    }
+    .floating-whatsapp:hover { color: #fff; transform: translateY(-3px); }
+
+    @media (max-width: 991px) {
+      .hero { min-height: auto; padding: 120px 0 70px; }
+      .hero h1 { font-size: 2.6rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container py-2">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-dark" href="#inicio">
+      <span class="brand-mark"><i class="bi bi-calculator"></i></span>
+      <span>Diazzi <span class="text-primary">Contabilidade</span></span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+            aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#empresa">A Empresa</a></li>
+        <li class="nav-item"><a class="nav-link" href="#dados">Dados</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+          <a class="btn btn-primary rounded-pill px-4" href="https://wa.me/5569993646232" target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp me-1"></i> Fale conosco
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="inicio" class="hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <span class="hero-badge mb-4">
+          <i class="bi bi-patch-check-fill"></i>
+          Contabilidade em Porto Velho - RO
+        </span>
+
+        <h1 class="display-3 mb-4">
+          Contabilidade com <span>organização</span>, clareza e confiança.
+        </h1>
+
+        <p class="lead text-secondary mb-4">
+          A <strong>Diazzi Contabilidade</strong> atua com atividades de contabilidade,
+          oferecendo uma presença profissional para apoiar empresas na organização
+          das suas informações e rotinas contábeis.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3">
+          <a class="btn btn-primary btn-lg rounded-pill px-4" href="https://wa.me/5569993646232" target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp me-2"></i>Falar pelo WhatsApp
+          </a>
+          <a class="btn btn-outline-dark btn-lg rounded-pill px-4" href="#servicos">
+            Conheça nossas atividades <i class="bi bi-arrow-down ms-2"></i>
+          </a>
+        </div>
+
+        <div class="d-flex flex-wrap gap-4 mt-5 text-secondary">
+          <div><i class="bi bi-check-circle-fill text-success me-2"></i>Empresa ativa</div>
+          <div><i class="bi bi-check-circle-fill text-success me-2"></i>Simples Nacional</div>
+          <div><i class="bi bi-check-circle-fill text-success me-2"></i>Atendimento profissional</div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="hero-card p-4 p-lg-5">
+          <div class="d-flex align-items-center gap-3 mb-4">
+            <div class="icon-box"><i class="bi bi-bar-chart-line-fill"></i></div>
+            <div>
+              <div class="small-caps">Atividade principal</div>
+              <h2 class="h5 fw-bold text-dark mb-0">Atividades de contabilidade</h2>
+            </div>
+          </div>
+
+          <div class="border-top pt-4">
+            <p class="mb-3">
+              <span class="fw-bold text-dark">CNAE</span><br>
+              69.20-6-01
+            </p>
+            <p class="mb-3">
+              <span class="fw-bold text-dark">CRC</span><br>
+              RO-001078/O
+            </p>
+            <p class="mb-0">
+              <span class="fw-bold text-dark">Situação cadastral</span><br>
+              <span class="badge text-bg-success rounded-pill">Ativa</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- STATS -->
+<section class="stats py-5">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-6 col-lg-3">
+        <div class="stat-number">2025</div>
+        <div class="stat-label">Ano de fundação</div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-number">15 mil</div>
+        <div class="stat-label">Capital social</div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-number">ME</div>
+        <div class="stat-label">Porte da empresa</div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-number">RO</div>
+        <div class="stat-label">Registro profissional</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="section-padding">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="small-caps mb-2">Soluções contábeis</div>
+      <h2 class="section-title display-6">Atividades de contabilidade</h2>
+      <p class="section-subtitle text-secondary mt-3">
+        Organização, acompanhamento e informação para contribuir com uma gestão
+        mais segura e estruturada do seu negócio.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="icon-box mb-4"><i class="bi bi-journal-check"></i></div>
+          <h3>Escrituração contábil</h3>
+          <p class="text-secondary mb-0">
+            Organização e registro das informações contábeis da empresa de forma estruturada.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="icon-box mb-4"><i class="bi bi-file-earmark-text"></i></div>
+          <h3>Obrigações contábeis</h3>
+          <p class="text-secondary mb-0">
+            Acompanhamento das rotinas e informações necessárias para manter a documentação organizada.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="icon-box mb-4"><i class="bi bi-graph-up-arrow"></i></div>
+          <h3>Informações para gestão</h3>
+          <p class="text-secondary mb-0">
+            Informações contábeis que ajudam o empreendedor a compreender melhor seu negócio.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="icon-box mb-4"><i class="bi bi-receipt"></i></div>
+          <h3>Organização fiscal</h3>
+          <p class="text-secondary mb-0">
+            Apoio na organização das informações fiscais relacionadas à rotina empresarial.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="icon-box mb-4"><i class="bi bi-people"></i></div>
+          <h3>Orientação empresarial</h3>
+          <p class="text-secondary mb-0">
+            Atendimento próximo para esclarecer dúvidas e orientar decisões relacionadas à rotina contábil.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="icon-box mb-4"><i class="bi bi-shield-check"></i></div>
+          <h3>Conformidade e organização</h3>
+          <p class="text-secondary mb-0">
+            Foco em processos organizados e informações consistentes para uma rotina empresarial mais tranquila.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMPRESA -->
+<section id="empresa" class="section-padding bg-light">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="small-caps mb-2">Sobre a empresa</div>
+        <h2 class="section-title display-6 mb-4">Uma contabilidade próxima do seu negócio.</h2>
+        <p class="lead text-secondary">
+          A <strong>Diazzi Contabilidade LTDA</strong> foi fundada em 04 de julho de 2025
+          e está localizada em Porto Velho, Rondônia.
+        </p>
+        <p class="text-secondary">
+          Sua atividade principal, conforme os dados cadastrais informados, é
+          <strong>69.20-6-01 - Atividades de contabilidade</strong>.
+          A empresa possui situação cadastral ativa e é optante pelo Simples Nacional.
+        </p>
+
+        <div class="d-flex gap-3 mt-4">
+          <div class="icon-box"><i class="bi bi-building-check"></i></div>
+          <div>
+            <h3 class="h6 fw-bold text-dark">Compromisso com organização</h3>
+            <p class="text-secondary mb-0">
+              Informação clara e uma comunicação profissional para apoiar a rotina empresarial.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="about-box p-4 p-lg-5">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="h5 fw-bold text-dark mb-0">Dados cadastrais</h3>
+            <span class="badge text-bg-success rounded-pill">Ativa</span>
+          </div>
+
+          <ul class="list-unstyled info-list mb-0">
+            <li><span class="fw-semibold">Razão Social:</span> Diazzi Contabilidade LTDA</li>
+            <li><span class="fw-semibold">Nome Fantasia:</span> Diazzi Contabilidade</li>
+            <li><span class="fw-semibold">CNPJ:</span> 61.603.036/0001-54</li>
+            <li><span class="fw-semibold">CRC:</span> RO-001078/O</li>
+            <li><span class="fw-semibold">Natureza Jurídica:</span> Sociedade Empresária Limitada</li>
+            <li><span class="fw-semibold">Porte:</span> Micro Empresa</li>
+            <li><span class="fw-semibold">Regime:</span> Simples Nacional</li>
+            <li><span class="fw-semibold">Capital Social:</span> R$ 15.000,00</li>
+            <li><span class="fw-semibold">Tipo:</span> Matriz</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="section-padding">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="small-caps mb-2">Nossa proposta</div>
+      <h2 class="section-title display-6">Mais clareza para sua rotina empresarial</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="text-center px-3">
+          <div class="icon-box mx-auto mb-3"><i class="bi bi-chat-dots"></i></div>
+          <h3 class="h5 fw-bold text-dark">Comunicação clara</h3>
+          <p class="text-secondary">Informações apresentadas de maneira objetiva e compreensível.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="text-center px-3">
+          <div class="icon-box mx-auto mb-3"><i class="bi bi-diagram-3"></i></div>
+          <h3 class="h5 fw-bold text-dark">Organização</h3>
+          <p class="text-secondary">Processos e informações estruturados para facilitar o acompanhamento.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="text-center px-3">
+          <div class="icon-box mx-auto mb-3"><i class="bi bi-person-check"></i></div>
+          <h3 class="h5 fw-bold text-dark">Atendimento próximo</h3>
+          <p class="text-secondary">Um contato profissional para apoiar as necessidades contábeis do negócio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DADOS DO RESPONSÁVEL -->
+<section id="dados" class="section-padding bg-light">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="about-box p-4 p-lg-5 h-100">
+          <div class="small-caps mb-2">Quadro societário</div>
+          <h2 class="section-title h2 mb-4">Responsável pela empresa</h2>
+
+          <div class="d-flex align-items-center gap-3">
+            <div class="icon-box"><i class="bi bi-person-badge"></i></div>
+            <div>
+              <h3 class="h5 fw-bold text-dark mb-1">Ketlen Dias de Almeida</h3>
+              <p class="text-secondary mb-0">Sócio-Administrador</p>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <p class="text-secondary mb-0">
+            Qualificação do responsável pela empresa: <strong>Sócio-Administrador</strong>.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="about-box p-4 p-lg-5 h-100">
+          <div class="small-caps mb-2">Atividade principal</div>
+          <h2 class="section-title h2 mb-4">CNAE</h2>
+          <div class="display-6 fw-bold text-primary">69.20-6-01</div>
+          <p class="text-secondary mt-2 mb-0">Atividades de contabilidade</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="section-padding">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="small-caps mb-2">Fale com a Diazzi</div>
+      <h2 class="section-title display-6">Entre em contato</h2>
+      <p class="section-subtitle text-secondary mt-3">
+        Estamos em Porto Velho - RO. Escolha o canal de contato mais conveniente para você.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="contact-card p-4 h-100">
+          <div class="icon-box mb-4"><i class="bi bi-whatsapp"></i></div>
+          <h3 class="h5 fw-bold text-dark">WhatsApp</h3>
+          <p class="text-secondary">(69) 99364-6232</p>
+          <a href="https://wa.me/5569993646232" target="_blank" rel="noopener" class="btn btn-success rounded-pill">
+            Conversar agora <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="contact-card p-4 h-100">
+          <div class="icon-box mb-4"><i class="bi bi-envelope"></i></div>
+          <h3 class="h5 fw-bold text-dark">E-mail</h3>
+          <p class="text-secondary text-break">poly@assessoriadecontbr.online</p>
+          <a href="mailto:poly@assessoriadecontbr.online" class="btn btn-primary rounded-pill">
+            Enviar e-mail <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-12 col-lg-4">
+        <div class="contact-card p-4 h-100">
+          <div class="icon-box mb-4"><i class="bi bi-geo-alt"></i></div>
+          <h3 class="h5 fw-bold text-dark">Endereço</h3>
+          <p class="text-secondary mb-3">
+            Rua Henrique Soro, 6300<br>
+            Aponiã - Porto Velho/RO<br>
+            CEP 76824-074
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Rua+Henrique+Soro%2C+6300%2C+Aponi%C3%A3%2C+Porto+Velho%2C+RO%2C+76824-074"
+             target="_blank" rel="noopener" class="btn btn-outline-primary rounded-pill">
+            <i class="bi bi-map me-1"></i>Ver no Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta p-4 p-lg-5 mt-5">
+      <div class="row align-items-center g-4 position-relative" style="z-index:1">
+        <div class="col-lg-8">
+          <div class="small-caps text-white-50 mb-2">Diazzi Contabilidade</div>
+          <h2 class="fw-bold mb-2">Organização contábil para acompanhar o crescimento do seu negócio.</h2>
+          <p class="mb-0 text-white-50">
+            Fale conosco para conhecer nosso atendimento e nossas atividades de contabilidade.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="https://wa.me/5569993646232" target="_blank" rel="noopener"
+             class="btn btn-light btn-lg rounded-pill px-4">
+            <i class="bi bi-whatsapp me-2"></i>Chamar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <span class="brand-mark"><i class="bi bi-calculator"></i></span>
+          <strong class="text-white fs-5">Diazzi Contabilidade</strong>
+        </div>
+        <p class="mb-0">
+          Atividades de contabilidade em Porto Velho - Rondônia.
+        </p>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <h3 class="h6 text-white fw-bold">Contato</h3>
+        <p class="mb-1">(69) 99364-6232</p>
+        <p class="mb-0 text-break">poly@assessoriadecontbr.online</p>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <h3 class="h6 text-white fw-bold">Empresa</h3>
+        <p class="mb-1">CNPJ 61.603.036/0001-54</p>
+        <p class="mb-0">CRC RO-001078/O</p>
+      </div>
+    </div>
+
+    <hr class="border-secondary my-4">
+
+    <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small">
+      <span>&copy; <span id="ano"></span> Diazzi Contabilidade LTDA. Todos os direitos reservados.</span>
+      <span>Porto Velho - RO</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a class="floating-whatsapp" href="https://wa.me/5569993646232" target="_blank" rel="noopener"
+   aria-label="Falar com a Diazzi Contabilidade pelo WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  // Fecha o menu mobile após clicar em um link
+  document.querySelectorAll('#menu .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.getElementById('menu');
+      const instance = bootstrap.Collapse.getInstance(menu);
+      if (instance) instance.hide();
+    });
+  });
+</script>
+</body>
+</html>
